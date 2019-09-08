@@ -1,0 +1,9 @@
+grant codeBase "${SD.Projeto.Dropbox.activation.setup.codebase}" {
+    // permissions to read system properties required by setup program
+    permission java.util.PropertyPermission "SD.Projeto.Dropbox.activation.impl.codebase","read";
+    permission java.util.PropertyPermission "SD.Projeto.Dropbox.activation.policy","read";
+    permission java.util.PropertyPermission "SD.Projeto.Dropbox.activation.file","read";
+    permission java.util.PropertyPermission "SD.Projeto.Dropbox.activation.servicename","read";
+    // permission to connect to the activation system and the registry
+    permission java.net.SocketPermission "*:1098-1099","connect";
+};
